@@ -228,7 +228,7 @@ TODO: Update for new article
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
-Understanding what information is recoverable from unknown symbolic system would increase knowledge and understanding in archaeology, anthropology, history, and linguistics. Speculatively, methods used to understand lost languages or scripts could also support the initial analysis of symbolic systems associated with a hypothetical extraterrestrial technological artifacts, such as a plaque-like inscription on a spacecraft \cite{}. Research has been unable to yield satisfactory reproducible decipherments of lost scripts and basic questions such as Rongorongo's status as a writing system is still an open question\cite{tamburini2025_automatic_decipherment}. Our Barthel created the now canonical transliterations for Rongorongo in 1958 \cite{barthel1958grundlagen}. Transliterations for Linear A and Indus Valley were provided by TODO in TODO \cite{salgarella2021_sigla} and TODO in TODO \cite{yadav2010_indus_ngrams} respectively. Over six decades of research has been unable to provide scientifically verifiable, or repeatable interpretations or decipherments of these languages. 
+Understanding what information is recoverable from unknown symbolic system could increase knowledge and understanding in archeology, anthropology, history, and linguistics. Speculatively, methods used to understand lost languages or scripts could also support the initial analysis of symbolic systems associated with a hypothetical extraterrestrial technological artifacts, such as a plaque-like inscription on a spacecraft. Research has been unable to yield satisfactory reproducible decipherments of lost scripts and basic questions such as Rongorongo's status as a writing system is still an open question\cite{tamburini2025_automatic_decipherment}. Our Barthel created the now canonical transliterations for Rongorongo in 1958 \cite{barthel1958grundlagen}. Transliterations for Linear A and Indus Valley were provided by TODO in TODO \cite{salgarella2021_sigla} and TODO in TODO \cite{yadav2010_indus_ngrams} respectively. Over six decades of research has been unable to provide scientifically verifiable, or repeatable interpretations or decipherments of these languages. 
 
 The focus of this paper is the research, development, and application of machine learning techniques to low-resource languages.  It examines how established natural language processing (NLP) methods and information-theoretical approaches can be adapted to extract context, structure, and relationships from languages for which conventional linguistic resources are limited or unavailable.  This research demonstrates how low resource languages can be exploited with NLP and information-theoretic approaches to yield favorable insight and structural relationships into a completely unknown language.  The approach provides an opportunity to derive new insights into low resource languages and their underlying structure without requiring direct translation of their content.  This demonstrates how the combination of NLP methods with systematic extraction and machine learning can identify additional structure and relationships within languages for which conventional linguistic resources are unavailable.  We first determine if there is enough informational content in the corpora for theoretical decipherment to be possible using information-theoretical techniques. We then apply machine learning techniques such as HDBSCAN categorization and embeddings to uncover available insight. 
 
@@ -238,33 +238,33 @@ The remainder of this paper is structured as follows: Section~\ref{lit} describe
 
 \section{Literature Review}
 \label{lit}
-\subsection{Easter Island and Rongo Rongo}
-Efforts to translate and decipher have spanned centuries. Rapa Nui is still the spoken language of the indiginous people of Easter Island. \cite{}
+\subsection{Easter Island and Rongorongo}
+Work on Rongorongo has spanned decades. In his 1958 work \emph{Grundlagen zur Entzifferung der Osterinselschrift} Barthel created the alphanumeric cataloging system and transliterations from glyph to alpha numeric characters \cite{barthel1958grundlagen}. Horley provided corrected glyphs based on Barthel's work \cite{horley2021rongorongo} and Jacques Guy provided the tablet detail \cite{guy_rongorongo_org} and original web resources Philip Spaelti used to create Kohaumotu.org which provides the glyph library this paper uses as input data. \cite{spaelti_2012_glyph}
 
-Father Sebastian Englebert creates Rapa Nui to Spanish Dictionary in 1938, translated to spanish in and updated in 1978.\cite{englert1948diccionario}
+\subsection{ Crete and Linear A}
+Linear A has been studied for over a century when Minos Kalokairinos discovered the first artifact in 1878 on the island of Crete \cite{owens1993_from_linear_a_to_linear_b}. Authur Evans published published a systematic study in 1909 \cite{evans1909_scripta_minoa}. Emma Bennett created a signory and numbering system in 1964 \cite{}
 
-Rapa Nui to Spanish \cite{englert1948diccionario}
+The entire linear A corpus contains around 1400 inscriptions with 7400 symbols. An additional 1100 objects are too poorly preserved to be readable and are not counted as part of this corpus.\cite{salgarella2025_writing_bronze_age_crete}
 
-In his 1958 work \emph{Grundlagen zur Entzifferung der Osterinselschrift} Barthel created the alphanumeric cataloging system and transliterations from glyph to alpha numeric characters \cite{barthel1958grundlagen}. 
 
-Horley provides corrected glyphs and 
-
-Jacques Guy provided the tablet detail \cite{guy_rongorongo_org} and original web resources Philip Spaelti used to create Kohaumotu.org which provides the glyph library this paper uses as input data. \cite{spaelti_2012_glyph}
-
-\subsection{Linear A}
-
+Most Linear A writing has been found on the island of Crete and the Aegean islands for place and religious writings. The artifacts were written on clay, stone, gold, jewelry, and pottery.  \cite{salgarella2025_writing_bronze_age_crete}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Data
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Data}
 \label{data}
-Two distinct data sets were used for this paper. One for Rongo Rongo and one for Linear A. Rongo Rongo is the extinct script of Easter Island \cite{fischer1997rongorongo}. Linear A is also a lost script that was used on Crete during the second millennium BCE \cite{salgarella2021_sigla}.  
+Two distinct data sets were used for this paper. One data set for Rongorongo and one data set for Linear A. Rongorongo is the extinct script of Easter Island \cite{fischer1997rongorongo}. Linear A is also a lost script that was used on Crete during the second millennium BCE \cite{salgarella2021_sigla}.  
 
-\subsection{Rongo Rongo}
-Data available at the \href{http://kohaumotu.org/Rongorongo/Glyph_Library/glyph_variants.html}{Rongorongo corpus (codes only)}\cite{spaelti_2012_glyph} was used for all analysis of Rongo Rongo. This site relies on the work initially recorded by Barthel in 1958 \cite{barthel1958grundlagen} which as been assembled in to an impressive interactive website greatly aiding in the understanding of Rongo Rongo glyphs. This paper relies on the accuracy of transliterations from this prior work. 
+While Linear A is likely a logosyllabic writing system \cite{salgarella2021_sigla} and Rongorongo is still unresolved \cite{tamburini2025_automatic_decipherment}.
+Linear A inscriptions are written left to right, with a few examples of right-to-left or boustrophedon writing \cite{salgarella2022_linear_a} while Rongorongo is consistently boustrophedon\cite{}. Our analysis attempts to be indifferent to writing system or direction of writing. 
 
-The Rongo Rongo corpus consists of 26 Tablets Coded A though Z and retrieved from \href{http://kohaumotu.org/Rongorongo_new/views/codes_only.php}{the Kohaumotu Rongorongo codes page} \cite{spaelti_2012_glyph}. The updated 3 character glyph codes were used to create an encoding library of all encodings. Instead of using the glyphs themselves we rely directly on the index created by Barthel to represent a manual encoding of glyphs \cite{barthel1958grundlagen}.
+\subsection{Rongorongo}
+Data available at the \href{http://kohaumotu.org/Rongorongo/Glyph_Library/glyph_variants.html}{Rongorongo corpus (codes only)}\cite{spaelti_2012_glyph} was used for all analysis of Rongorongo. This site relies on the work initially recorded by Barthel in 1958 \cite{barthel1958grundlagen} which as been assembled in to an impressive interactive website greatly aiding in the understanding of Rongo Rongo glyphs. This paper relies on the accuracy of transliterations from this prior work. 
+
+Rongorongo texts are arranged in reverse boustrophedon, requiring the tablet to be rotated upon reaching the end of each line \cite{horley2009_rongorongo}.
+
+The Rongorongo corpus consists of 26 Tablets Coded A though Z and retrieved from \href{http://kohaumotu.org/Rongorongo_new/views/codes_only.php}{the Kohaumotu Rongorongo codes page} \cite{spaelti_2012_glyph}. The updated glyph codes were used to create an encoding library of all encodings. Instead of using the glyphs themselves we rely directly on the index originally created by Barthel to represent a manual encoding of glyphs \cite{barthel1958grundlagen}.
 
 The glyphs are numbered in a systematic manner. Each row is intended to categorize the glyphs with Row 0 containing the simplest forms while higher rows increase in complexity. While only 90 rows are shown 799 total rows were categorized by Barthel and avaliable in \cite{barthel1958grundlagen} and in the Kohaumotu.org website. \cite{spaelti_2012_glyph}.
 
@@ -286,20 +286,7 @@ and \texttt{001} represents both variants
 \label{fig_glyphs_example}
 \end{figure}
 
-Written in serpentine order sequenced in this order. TODO: consider left to right and right to left for both.  does it matter?  Could just say we assume temporality and were able to observe the message.  this would not be the case in a alien society reading our space craft plates. 
 \subsection{Linear A}
-A logosyllabic writing system \cite{salgarella2021_sigla}
-Written left to right, but some right to left and sometimes boustrophedon. In boustrophedon alternate lines of writing are reversed similar in directionality as an ox turns whiel plowing. \cite{}
-%  (βοῦς, στροφή, βουστροφηδόν. Liddell, Henry George; Scott, Robert; A Greek–English Lexicon at the Perseus Project
-
- Emma Bennett created a signory and numbering system in 1964 \cite{}
-% Bennett, E. L. Jr., "Mycenaean Studies Proceedings of the Third International Colloquium for Mycenaean Studies held at 'Wingspread', 4—8 September 1961", ed. Madison: University of Wisconsin Press, 1964
-
-The entire linear A corpus contains around 1400 inscriptions with 7400 symbols. An additional 1100 objects are too poorly preserved to be readable and are not counted as part of this corpus.\cite{salgarella2025_writing_bronze_age_crete}
-% Salgarella, Ester (2025). Writing in Bronze Age Crete: "Minoan" Linear A. Cambridge University Press. ISBN 9781009520027.
-
-Most Linear A writing has been found on the island of Crete and the Aegean islands for place and religious writings. The artifacts were written on clay, stone, gold, jewelry, and pottery.  \cite{salgarella2025_writing_bronze_age_crete}
-% Salgarella, Ester (2025). Writing in Bronze Age Crete: "Minoan" Linear A. Cambridge University Press. ISBN 9781009520027.
 
 \begin{figure}[H]
 \centering
@@ -311,11 +298,7 @@ Most Linear A writing has been found on the island of Crete and the Aegean islan
 The data used in this paper was sourced directly from Robert Hogan's Linear A Explorer which is a visulaizaiton tool for exploring the Linear A Language. \cite{karajgikar2025_linear_a}
 https://lineara.xyz/
 
-The Linear A Explorer uses images and transcriptions from Luis Godart and Jean-Pierre Olivier \cite{salgarella2021_sigla}
-% [Louis Godart and Jean-Pierre Olivier](https://bit.ly/2H6Ohwe) in 1970 and of the 
-as well as the tabulations by George Douros. \cite{karajgikar2025_linear_a}
-
-% [tabulation and interpretation of the inscriptions by George Douros](http://users.teilar.gr/~g1951d/).
+The Linear A Explorer uses images and transcriptions from Luis Godart and Jean-Pierre Olivier \cite{salgarella2021_sigla} as well as the tabulations by George Douros. \cite{karajgikar2025_linear_a}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Methodology and rationale 
@@ -325,8 +308,6 @@ as well as the tabulations by George Douros. \cite{karajgikar2025_linear_a}
 We apply a machine learning clustering pipeline centered around an HDBSCAN model and information-theoretic techniques as complementary methods. HDBSCAN attempts to group data points into separable clusters by evaluating multivariate similarity among informational features. HDBSCAN is especially useful in unknown languages since it creates separation without requiring labels or a predetermined number of clusters \cite{campello2015_hierarchical_density_estimates}. Information-theoretic measures summarize corpus properties such as uncertainty, redundancy, and properties relevant to decipherability. Shannon entropy measure the uncertainty in the distribution while redundancy reflects predictable or repeatable structure \cite{shannon1945_mathematical_cryptography}. Both approaches distinguish patterns that can be inferred from the data without linguistic or archeological interpretations. 
 
 Data transformation techniques used in this paper require the symbols of both the Rongorongo and Linear A scripts to be analyzed as individual symbols (uni-grams) and sequences of symbols (n-grams). When a technique or data processing stage uses both uni-grams and n-grams we refer to them collectively as observations.
-
-
 
 It is important to define the characteristics of a low-resource language and the resulting limitations for NLP.  For this research, a low-resource language meets three criteria: (1) it is no longer spoken or used and lacks a reliable method of translation; (2) it lacks sufficient digital resources, such as corpora or annotations; and (3) it lacks the cultural and anthropological context necessary for meaningful interpretation. The convergence of these conditions severely constrains conventional NLP approaches. For example, a traditional machine translation model cannot be effectively developed without sufficient translated or aligned language data. The absence of these resources limits the ability of machine learning to perform its traditional tasks and instead requires approaches capable of extracting information from the evidence that remains \cite{magueresse2020_low_resource_languages}.
 
