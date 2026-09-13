@@ -175,7 +175,7 @@ Research Reports describe the results of original research of exceptional import
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-This study investigates what information can be recovered from symbolic data such as lost languages or as yet undiscovered scripts. It compares two exploratory approaches that require no prior knowledge of the data or language. Machine learning clustering and information theoretic measurements. HDBSCAN is used to uncover recurring groups without predefined categories. Information theoretic measures quantify redundancy, uncertainty, and unicity distance as well as applying embeddings methods. 
+This study investigates what information can be recovered from symbolic data such as lost languages or as yet undiscovered scripts. It compares two exploratory approaches that require no prior knowledge of the data or language. Machine learning clustering and information theoretic measurements. HDBSCAN is used to uncover recurring groups without predefined categories \cite{campello2015_hierarchical_density_estimates}. Information theoretic measures quantify redundancy, uncertainty, and unicity distance as well as applying embeddings methods \cite{shannon1945_mathematical_cryptography,shannon1949_communication_secrecy}. 
 
 \end{abstract}
 
@@ -275,7 +275,7 @@ and \texttt{001} represents both variants
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\textwidth]{fig_rongo_g_washington.png}
-\caption{\textbf{Rongo Rongo Great Washington Tablet.} Images created by the Smithsonian and compliled by .}
+\caption{\textbf{Rongo Rongo Great Washington Tablet.} Images created by the Smithsonian.}
 \label{fig_rongo_g_washington}
 \end{figure}
 
@@ -295,10 +295,10 @@ Written left to right, but some right to left and sometimes boustrophedon. In bo
  Emma Bennett created a signory and numbering system in 1964 \cite{}
 % Bennett, E. L. Jr., "Mycenaean Studies Proceedings of the Third International Colloquium for Mycenaean Studies held at 'Wingspread', 4—8 September 1961", ed. Madison: University of Wisconsin Press, 1964
 
-The entire linear A corpus contains around 1400 inscriptions with 7400 symbols. An additional 1100 objects are too poorly preserved to be readable and are not counted as part of this corpus.\cite{}
+The entire linear A corpus contains around 1400 inscriptions with 7400 symbols. An additional 1100 objects are too poorly preserved to be readable and are not counted as part of this corpus.\cite{salgarella2025_writing_bronze_age_crete}
 % Salgarella, Ester (2025). Writing in Bronze Age Crete: "Minoan" Linear A. Cambridge University Press. ISBN 9781009520027.
 
-Most Linear A writing has been found on the island of Crete and the Aegean islands for place and religious writings. The artifacts were written on clay, stone, gold, jewelry, and pottery.  \cite{}
+Most Linear A writing has been found on the island of Crete and the Aegean islands for place and religious writings. The artifacts were written on clay, stone, gold, jewelry, and pottery.  \cite{salgarella2025_writing_bronze_age_crete}
 % Salgarella, Ester (2025). Writing in Bronze Age Crete: "Minoan" Linear A. Cambridge University Press. ISBN 9781009520027.
 
 \begin{figure}[H]
@@ -314,7 +314,7 @@ https://lineara.xyz/
 The Linear A Explorer uses images and transcriptions from Luis Godart and Jean-Pierre Olivier \cite{salgarella2021_sigla}
 % [Louis Godart and Jean-Pierre Olivier](https://bit.ly/2H6Ohwe) in 1970 and of the 
 as well as the tabulations by George Douros. \cite{karajgikar2025_linear_a}
-\cite{}
+
 % [tabulation and interpretation of the inscriptions by George Douros](http://users.teilar.gr/~g1951d/).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -322,25 +322,25 @@ as well as the tabulations by George Douros. \cite{karajgikar2025_linear_a}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Methodology and Rationale}
 \label{meth}
-We apply a machine learning clustering pipeline centered around an HDBSCAN model and information-theoretic techniques as complementary methods. HDBSCAN attempts to group data points into separable clusters by evaluating multivariate similarity among informational features. HDBSCAN is especially useful in unknown languages since it creates separation without requiring labels or a predetermined number of clusters. Information-theoretic measures summarize corpus properties such as uncertainty, redundancy, and properties relevant to decipherability. Shannon entropy measure the uncertainty in the distribution while redundancy reflects predictable or repeatable structure \cite{shannon1945_mathematical_cryptography}. Both approaches distinguish patterns that can be inferred from the data without linguistic or archeological interpretations. 
+We apply a machine learning clustering pipeline centered around an HDBSCAN model and information-theoretic techniques as complementary methods. HDBSCAN attempts to group data points into separable clusters by evaluating multivariate similarity among informational features. HDBSCAN is especially useful in unknown languages since it creates separation without requiring labels or a predetermined number of clusters \cite{campello2015_hierarchical_density_estimates}. Information-theoretic measures summarize corpus properties such as uncertainty, redundancy, and properties relevant to decipherability. Shannon entropy measure the uncertainty in the distribution while redundancy reflects predictable or repeatable structure \cite{shannon1945_mathematical_cryptography}. Both approaches distinguish patterns that can be inferred from the data without linguistic or archeological interpretations. 
 
 Data transformation techniques used in this paper require the symbols of both the Rongorongo and Linear A scripts to be analyzed as individual symbols (uni-grams) and sequences of symbols (n-grams). When a technique or data processing stage uses both uni-grams and n-grams we refer to them collectively as observations.
 
 
 
-It is important to define the characteristics of a low-resource language and the resulting limitations for NLP.  For this research, a low-resource language meets three criteria: (1) it is no longer spoken or used and lacks a reliable method of translation; (2) it lacks sufficient digital resources, such as corpora or annotations; and (3) it lacks the cultural and anthropological context necessary for meaningful interpretation. The convergence of these conditions severely constrains conventional NLP approaches. For example, a traditional machine translation model cannot be effectively developed without sufficient translated or aligned language data. The absence of these resources limits the ability of machine learning to perform its traditional tasks and instead requires approaches capable of extracting information from the evidence that remains.
+It is important to define the characteristics of a low-resource language and the resulting limitations for NLP.  For this research, a low-resource language meets three criteria: (1) it is no longer spoken or used and lacks a reliable method of translation; (2) it lacks sufficient digital resources, such as corpora or annotations; and (3) it lacks the cultural and anthropological context necessary for meaningful interpretation. The convergence of these conditions severely constrains conventional NLP approaches. For example, a traditional machine translation model cannot be effectively developed without sufficient translated or aligned language data. The absence of these resources limits the ability of machine learning to perform its traditional tasks and instead requires approaches capable of extracting information from the evidence that remains \cite{magueresse2020_low_resource_languages}.
 
-Unsupervised techniques provide one avenue for analysis because they do not require predefined translations or labeled datasets. They can identify recurring patterns, relationships, and structural similarities within available language data. Clustering, dimensionality reduction, sequence analysis, and related methods can provide insight into the organization of symbols, recurring constructions, and relationships among textual elements. {include research done in this space}
+Unsupervised techniques provide one avenue for analysis because they do not require predefined translations or labeled datasets. They can identify recurring patterns, relationships, and structural similarities within available language data. Clustering, dimensionality reduction, sequence analysis, and related methods can provide insight into the organization of symbols, recurring constructions, and relationships among textual elements \cite{magueresse2020_low_resource_languages}. {include research done in this space}
 
-Self-supervised techniques provide a complementary approach by generating learning signals directly from the available data without human-labeled examples. Rather than relying on predefined translations or annotations, self-supervised methods use the structure and context of the language to develop computational representations. This is particularly relevant when textual or visual evidence exists but conventional linguistic resources do not.
+Self-supervised techniques provide a complementary approach by generating learning signals directly from the available data without human-labeled examples \cite{almeida2019_text_classification_survey}. Rather than relying on predefined translations or annotations, self-supervised methods use the structure and context of the language to develop computational representations. This is particularly relevant when textual or visual evidence exists but conventional linguistic resources do not.
 
-Word, symbol, and character embeddings are one application of self-supervised learning. By learning to predict or reconstruct elements from their surrounding context, embedding models can capture recurring patterns and relationships without requiring the meaning of each element to be explicitly known. Elements occurring in similar contexts may consequently develop similar representations within the resulting vector space.
+Word, symbol, and character embeddings are one application of self-supervised learning. By learning to predict or reconstruct elements from their surrounding context, embedding models can capture recurring patterns and relationships without requiring the meaning of each element to be explicitly known. Elements occurring in similar contexts may consequently develop similar representations within the resulting vector space \cite{almeida2019_text_classification_survey}.
 
-Embeddings are therefore not treated as a mechanism for independently translating an unknown language or determining the meaning of individual symbols. Instead, they provide a representation of relationships within the available evidence. These representations can be analyzed for structural patterns, contextual similarities, and potential relationships among symbols or textual elements. Combined with historical, linguistic, archaeological, and anthropological evidence, these techniques may expose information that is otherwise difficult to identify and provide a basis for generating and evaluating hypotheses.
+Embeddings are therefore not treated as a mechanism for independently translating an unknown language or determining the meaning of individual symbols. Instead, they provide a representation of relationships within the available evidence \cite{almeida2019_text_classification_survey}. These representations can be analyzed for structural patterns, contextual similarities, and potential relationships among symbols or textual elements. Combined with historical, linguistic, archaeological, and anthropological evidence, these techniques may expose information that is otherwise difficult to identify and provide a basis for generating and evaluating hypotheses.
 
 This research therefore focuses not on directly translating a low-resource language, but on determining what structure and relationships can be extracted from the limited evidence that remains. Machine learning is treated as a tool for developing, testing, and refining hypotheses about a language, its symbols, and their relationships rather than as an independent translation system.
 
-Based on this definition, several languages may qualify as low-resource languages, although a smaller subset retains sufficient digital representations to support computational analysis. Examples include the Indus Valley Script, Linear A, and Rongorongo, among others. These languages provide an opportunity to investigate how modern machine learning techniques can be applied when conventional linguistic resources are insufficient.
+Based on this definition, several languages may qualify as low-resource languages, although a smaller subset retains sufficient digital representations to support computational analysis. Examples include the Indus Valley Script, Linear A, and Rongorongo, among others \cite{yadav2010_indus_ngrams,salgarella2021_sigla,fischer1997rongorongo}. These languages provide an opportunity to investigate how modern machine learning techniques can be applied when conventional linguistic resources are insufficient.
 
 
 \subsection{Data Preparation}
@@ -368,7 +368,7 @@ symbol \(\left|\mathcal{S}_c\right|\). \(\rho_c(s)=0\) represents the most frequ
 Frequency rank normalization removes sign identity and gives the two scripts a shared feature space. This shared feature space allows HDBSCAN to compare patterns of relative symbol frequency and prevents the algorithm from separating the corpora merely based on different symbol inventories. 
 
 \subsection{Machine Learning with HDBSCAN}
-HDBSCAN pipeline consists of seven separate stages. Corpus Ingestion, TF-IDF Vectorization and UMAP Dimensionality Reduction prepare the data for the HDBSCAN algorithm. The HDBSCAN algorithm analyzes the data to form groups by evaluating the relative density and proximity of the data points. Topic extraction supports interpretation of resulting clusters and 3D Projection prepares the HDBSCAN output for 3 dimensional visualization. The following paragraphs describe each step of the process.
+HDBSCAN pipeline consists of seven separate stages. Corpus Ingestion, TF-IDF Vectorization and UMAP Dimensionality Reduction prepare the data for the HDBSCAN algorithm. The HDBSCAN algorithm analyzes the data to form groups by evaluating the relative density and proximity of the data points \cite{campello2015_hierarchical_density_estimates}. Topic extraction supports interpretation of resulting clusters and 3D Projection prepares the HDBSCAN output for 3 dimensional visualization. The following paragraphs describe each step of the process.
 
 \begin{figure}[H]
 \centering
@@ -384,16 +384,16 @@ Rongorongo and Linear A transcriptions are ingested into the pipeline and merged
 Each observed symbol is converted into a vector based on uni-gram and bi-gram features using TF-IDF.  Vectorization was restricted to bi-grams due to the relatively low amount of data available in order to ensure *** JUSTIFY it kept erroring somehow ***..  TF-IDF emphasizes terms that are important in the sequence of text yet relatively uncommon in the corpus \cite{manning2008_introduction_ir}.  
 
 \subsubsection{Dimensioality Reduction}
-Dimensionality reduction was performed using the UMAP algorithm. This reduces the high dimensionality resulting from the TF-IDF vectorization into 42 dimensions *** JUSTIFY ***. Cosine distance was chosen because it compensates for document size by length normalizing the vectors to unit vectors \cite{manning2008_introduction_ir}. 
+Dimensionality reduction was performed using the UMAP algorithm \cite{mcinnes2018_umap}. This reduces the high dimensionality resulting from the TF-IDF vectorization into 42 dimensions *** JUSTIFY ***. Cosine distance was chosen because it compensates for document size by length normalizing the vectors to unit vectors \cite{manning2008_introduction_ir}. 
 
 \subsubsection{HDBSCAN Clustering}
-Clustering is performed by HDBSCAN. The algorithm searches the 42-dimensional space for stable regions of high density. HDBSCAN was chosen because it does not require the number of clusters to be selected before hand. A minimum cluster size of 50 *** JUSTIFY *** was used. Once the model identifies the stable regions of high density is assigns each symbol or sequence of symbols to a stable cluster. If the observation is not a fit for one of the clusters it is labeled as noise. 
+Clustering is performed by HDBSCAN. The algorithm searches the 42-dimensional space for stable regions of high density. HDBSCAN was chosen because it does not require the number of clusters to be selected before hand. A minimum cluster size of 50 *** JUSTIFY *** was used. Once the model identifies the stable regions of high density is assigns each symbol or sequence of symbols to a stable cluster. If the observation is not a fit for one of the clusters it is labeled as noise \cite{campello2015_hierarchical_density_estimates}. 
 
 \subsubsection{Topic Extraction}
 Each cluster is then labeled with a topic using the five terms with the greatest TF-IDF weight among it's observations. This helps identify the symbols or sequences of symbols best represent the cluster. 
 
 \subsubsection{3D Projection}
-In order to display the 42 dimensions used to cluster the symbols in human readable form UMAP was once again used for dimensionality reduction. The 42 dimensions projected onto a 3-dimensional space superimpose the higher dimensional space. As a consequence the displayed coordinates are illustrative and are not the actual space used for clustering.
+In order to display the 42 dimensions used to cluster the symbols in human readable form UMAP was once again used for dimensionality reduction \cite{mcinnes2018_umap}. The 42 dimensions projected onto a 3-dimensional space superimpose the higher dimensional space. As a consequence the displayed coordinates are illustrative and are not the actual space used for clustering.
 
 \subsubsection{Interactive Visualization}
 The visualization shown is a static representation of a interactive visualization that can be used to display the observations by cluster, characteristic terms, and a preview of the corresponding observation. 
