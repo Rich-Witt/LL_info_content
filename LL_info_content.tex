@@ -176,6 +176,7 @@ Research Reports describe the results of original research of exceptional import
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 This study investigates what information can be recovered from symbolic data such as lost languages or as yet undiscovered scripts. It compares two exploratory approaches that require no prior knowledge of the data or language. Machine learning clustering and information theoretic measurements. HDBSCAN is used to uncover recurring groups without predefined categories. Information theoretic measures quantify redundancy, uncertainty, and unicity distance as well as applying embeddings methods. 
+TODO: Stronger version once results and discussion are complete.
 
 \end{abstract}
 
@@ -230,7 +231,7 @@ TODO: Update for new article
 
 Understanding what information is recoverable from unknown symbolic system could increase knowledge and understanding in archaeology, anthropology, history, and linguistics. Speculatively, methods used to understand lost languages or scripts could also support the initial analysis of symbolic systems associated with a hypothetical extraterrestrial technological artifacts, such as a plaque-like inscription on a spacecraft. Research has been unable to yield satisfactory reproducible decipherments of lost scripts and basic questions such as Rongorongo's status as a writing system is still an open question\cite{tamburini2025_automatic_decipherment}. Decades of research has been unable to provide scientifically verifiable, or repeatable interpretations or decipherments of these languages. 
 
-The focus of this paper is the research, development, and application of machine learning techniques to low-resource languages.  It examines how established natural language processing (NLP) methods and information-theoretical approaches can be adapted to extract context, structure, and relationships from languages for which conventional linguistic resources are limited or unavailable.  This research demonstrates how low resource languages can be exploited with NLP and information-theoretic approaches to yield favorable insight and structural relationships into a completely unknown language.  The approach provides an opportunity to derive new insights into low resource languages and their underlying structure without requiring direct translation of their content.  This demonstrates how the combination of NLP methods with systematic extraction and machine learning can identify additional structure and relationships within languages for which conventional linguistic resources are unavailable.  We first determine if there is enough informational content in the corpora for theoretical decipherment to be possible using information-theoretical techniques. We then apply machine learning techniques such as HDBSCAN categorization and embeddings to uncover available insight. 
+The focus of this paper is the research, development, and application of machine learning techniques to low-resource languages.  It examines how established natural language processing (NLP) methods and information-theoretical approaches can be adapted to extract context, structure, and relationships from languages for which conventional linguistic resources are limited or unavailable.  This research demonstrates how low resource languages and unknown languages can be exploited with NLP and information-theoretic approaches to yield favorable insight and structural relationships into a completely unknown language.  The approach provides an opportunity to derive new insights into low resource languages and their underlying structure without requiring direct translation of their content.  This demonstrates how the combination of NLP methods with systematic extraction and machine learning can identify additional structure and relationships within languages for which conventional linguistic resources are unavailable.  We first determine if there is enough informational content in the corpora for theoretical decipherment to be possible using information-theoretical techniques. We then apply machine learning techniques such as HDBSCAN categorization and embeddings to uncover available insight. 
 
 % \subsection{Outline}
 
@@ -246,7 +247,6 @@ Linear A has been studied for over a century when Minos Kalokairinos discovered 
 
 The entire linear A corpus contains around 1400 inscriptions with 7400 symbols. An additional 1100 objects are too poorly preserved to be readable and are not counted as part of this corpus.\cite{salgarella2025_writing_bronze_age_crete}
 
-
 Most Linear A writing has been found on the island of Crete and the Aegean islands for place and religious writings. The artifacts were written on clay, stone, gold, jewelry, and pottery.  \cite{salgarella2025_writing_bronze_age_crete}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -256,7 +256,7 @@ Most Linear A writing has been found on the island of Crete and the Aegean islan
 \label{data}
 Two distinct data sets were used for this paper. One data set for Rongorongo and one data set for Linear A. Rongorongo is the extinct script of Easter Island \cite{fischer1997rongorongo}. Linear A is also a lost script that was used on Crete during the second millennium BCE \cite{salgarella2021_sigla}.  
 
-While Linear A is likely a logosyllabic writing system \cite{salgarella2021_sigla} and Rongorongo is still unresolved \cite{tamburini2025_automatic_decipherment}.
+While Linear A is likely a logo-syllabic writing system \cite{salgarella2021_sigla} and Rongorongo is still unresolved \cite{tamburini2025_automatic_decipherment}.
 Linear A inscriptions are written left to right, with a few examples of right-to-left or boustrophedon writing \cite{salgarella2022_linear_a} while Rongorongo is consistently boustrophedon\cite{}. Our analysis attempts to be indifferent to writing system or direction of writing. 
 
 \subsection{Rongorongo}
@@ -295,7 +295,7 @@ and \texttt{001} represents both variants
 \label{fig_linear-A-Script}
 \end{figure}
 
-The data used in this paper was sourced directly from Robert Hogan's Linear A Explorer which is a visulaizaiton tool for exploring the Linear A Language. \cite{karajgikar2025_linear_a}
+The data used in this paper was sourced directly from Robert Hogan's Linear A Explorer which is a visualization tool for exploring the Linear A Language. \cite{karajgikar2025_linear_a}
 https://lineara.xyz/
 
 The Linear A Explorer uses images and transcriptions from Luis Godart and Jean-Pierre Olivier \cite{salgarella2021_sigla} as well as the tabulations by George Douros. \cite{karajgikar2025_linear_a}
@@ -305,7 +305,7 @@ The Linear A Explorer uses images and transcriptions from Luis Godart and Jean-P
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Methodology and Rationale}
 \label{meth}
-We apply a machine learning clustering pipeline centered around an HDBSCAN model and information-theoretic techniques as complementary methods. HDBSCAN attempts to group data points into separable clusters by evaluating multivariate similarity among informational features. HDBSCAN is especially useful in unknown languages since it creates separation without requiring labels or a predetermined number of clusters \cite{campello2015_hierarchical_density_estimates}. Information-theoretic measures summarize corpus properties such as uncertainty, redundancy, and properties relevant to decipherability. Shannon entropy measure the uncertainty in the distribution while redundancy reflects predictable or repeatable structure \cite{shannon1945_mathematical_cryptography}. Both approaches distinguish patterns that can be inferred from the data without linguistic or archeological interpretations. 
+We apply a machine learning clustering pipeline centered around an HDBSCAN model and information-theoretic techniques as complementary methods. HDBSCAN attempts to group data points into separable clusters by evaluating multivariate similarity among informational features. HDBSCAN is especially useful in unknown languages since it creates separation without requiring labels or a predetermined number of clusters \cite{campello2015_hierarchical_density_estimates}. Information-theoretic measures summarize corpus properties such as uncertainty, redundancy, and properties relevant to decipherability. Shannon entropy measure the uncertainty in the distribution while redundancy reflects predictable or repeatable structure \cite{shannon1945_mathematical_cryptography}. Both approaches distinguish patterns that can be inferred from the data without linguistic or archaeological interpretations. 
 
 Data transformation techniques used in this paper require the symbols of both the Rongorongo and Linear A scripts to be analyzed as individual symbols (uni-grams) and sequences of symbols (n-grams). When a technique or data processing stage uses both uni-grams and n-grams we refer to them collectively as observations.
 
@@ -364,7 +364,7 @@ Rongorongo and Linear A transcriptions are ingested into the pipeline and merged
 \subsubsection{Vectorization}
 Each observed symbol is converted into a vector based on uni-gram and bi-gram features using TF-IDF.  Vectorization was restricted to bi-grams due to the relatively low amount of data available in order to ensure *** JUSTIFY it kept erroring somehow ***..  TF-IDF emphasizes terms that are important in the sequence of text yet relatively uncommon in the corpus \cite{manning2008_introduction_ir}.  
 
-\subsubsection{Dimensioality Reduction}
+\subsubsection{Dimensionality Reduction}
 Dimensionality reduction was performed using the UMAP algorithm \cite{mcinnes2018_umap}. This reduces the high dimensionality resulting from the TF-IDF vectorization into 42 dimensions *** JUSTIFY ***. Cosine distance was chosen because it compensates for document size by length normalizing the vectors to unit vectors \cite{manning2008_introduction_ir}. 
 
 \subsubsection{HDBSCAN Clustering}
@@ -380,7 +380,7 @@ In order to display the 42 dimensions used to cluster the symbols in human reada
 The visualization shown is a static representation of a interactive visualization that can be used to display the observations by cluster, characteristic terms, and a preview of the corresponding observation. 
 
 \subsection{Information Theoretical}
-The informaiton theoretical pipline starts with raw data as defined in \ref{data}. n-grams of orders 1-4 ***JUSTIFY*** are prepared from this raw data. Each data set is analyzed from an frequency, 
+The information theoretical pipeline starts with raw data as defined in \ref{data}. n-grams of orders 1-4 ***JUSTIFY*** are prepared from this raw data. Each data set is analyzed from an frequency, 
 
 \subsubsection{N-gram Construction}
 Overlapping \(n\)-grams were generated for \(n \in \{1,2,3,4\}\). The \(i\)-th \(n\)-gram is defined as
@@ -457,7 +457,7 @@ The methods in this paper cannot decipher the meaning or linguistic composition 
 May be worth attempting to read un-readable Linear A scripts since the only \(1-gram\) set has enough information to be theoretically decipherable. Since the Linear A script is known to have complex symbols combined via ligature \cite{salgarella2021_sigla} 
 % Tomas, Helena (2012). "Cretan Hieroglyphic and Linear A". In Cline, Eric (ed.). The Oxford Handbook of the Bronze Age Aegean. Oxford University Press. pp. 113–125. doi:10.1093/oxfordhb/9780199873609.013.0026. ISBN 978-0199873609.
 
-it is likely the true decipherablility requires more information than the \(1-gram\) sequense implies. 
+it is likely the true decipherablility requires more information than the \(1-gram\) sequence implies. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % appendix
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
