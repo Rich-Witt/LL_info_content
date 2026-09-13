@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  13 SEP 2026 08:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  13 SEP 2026 09:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -331,24 +331,24 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 ) (./LL_info_content.aux)
 \openout1 = `LL_info_content.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
  (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count308
@@ -368,30 +368,30 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 76.
+Package hyperref Info: Link coloring ON on input line 78.
  (./LL_info_content.out) (./LL_info_content.out)
 \@outlinefile=\write4
 \openout4 = `LL_info_content.out'.
 
-<fig_placeholder.png, id=120, 1110.1475pt x 626.34pt>
-File: fig_placeholder.png Graphic file (type png)
-<use fig_placeholder.png>
-Package pdftex.def Info: fig_placeholder.png  used on input line 182.
+<./images/fig_placeholder.png, id=120, 1110.1475pt x 626.34pt>
+File: ./images/fig_placeholder.png Graphic file (type png)
+<use ./images/fig_placeholder.png>
+Package pdftex.def Info: ./images/fig_placeholder.png  used on input line 184.
 (pdftex.def)             Requested size: 350.99762pt x 198.03404pt.
 
 
 [1
 
-{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./fig_placeholder.png>]
+{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./images/fig_placeholder.png>]
 
 [2
 
 {/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 215.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 217.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 215.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 217.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -402,68 +402,72 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ]
 
 [2]
-Overfull \hbox (4.31482pt too wide) in paragraph at lines 246--247
+Overfull \hbox (4.31482pt too wide) in paragraph at lines 248--249
 []\T1/cmr/m/n/12 In his 1958 work \T1/cmr/m/it/12 Grund-la-gen zur Entz-if-fer-ung der Os-terin-selschrift \T1/cmr/m/n/12 Barthel
  []
 
 
 
 [3]
-<fig_rongo_g_washington.png, id=193, 1495.08563pt x 366.87062pt>
-File: fig_rongo_g_washington.png Graphic file (type png)
-<use fig_rongo_g_washington.png>
-Package pdftex.def Info: fig_rongo_g_washington.png  used on input line 275.
+<./images/fig_rongo_g_washington.png, id=193, 1495.08563pt x 366.87062pt>
+File: ./images/fig_rongo_g_washington.png Graphic file (type png)
+<use ./images/fig_rongo_g_washington.png>
+Package pdftex.def Info: ./images/fig_rongo_g_washington.png  used on input line 277.
 (pdftex.def)             Requested size: 350.99762pt x 86.12503pt.
-<fig_glyphs_example.png, id=194, 854.19125pt x 564.1075pt>
-File: fig_glyphs_example.png Graphic file (type png)
-<use fig_glyphs_example.png>
-Package pdftex.def Info: fig_glyphs_example.png  used on input line 282.
+<./images/fig_glyphs_example.png, id=194, 854.19125pt x 564.1075pt>
+File: ./images/fig_glyphs_example.png Graphic file (type png)
+<use ./images/fig_glyphs_example.png>
+Package pdftex.def Info: ./images/fig_glyphs_example.png  used on input line 284.
 (pdftex.def)             Requested size: 350.99762pt x 231.79341pt.
 
 
-[4 <./fig_rongo_g_washington.png> <./fig_glyphs_example.png>]
-<fig_9329-Linear-A-Script.jpg, id=206, 582.175pt x 692.5875pt>
-File: fig_9329-Linear-A-Script.jpg Graphic file (type jpg)
-<use fig_9329-Linear-A-Script.jpg>
-Package pdftex.def Info: fig_9329-Linear-A-Script.jpg  used on input line 304.
+[4 <./images/fig_rongo_g_washington.png>]
+<./images/fig_9329-Linear-A-Script.jpg, id=204, 582.175pt x 692.5875pt>
+File: ./images/fig_9329-Linear-A-Script.jpg Graphic file (type jpg)
+<use ./images/fig_9329-Linear-A-Script.jpg>
+Package pdftex.def Info: ./images/fig_9329-Linear-A-Script.jpg  used on input line 306.
 (pdftex.def)             Requested size: 350.99762pt x 417.57419pt.
 
 
-[5]
+[5 <./images/fig_glyphs_example.png>]
 
-[6 <./fig_9329-Linear-A-Script.jpg>]
+[6 <./images/fig_9329-Linear-A-Script.jpg>]
 
 [7]
-<fig_HDBSCAN Pipeline.png, id=234, 930.47626pt x 150.5625pt>
-File: fig_HDBSCAN Pipeline.png Graphic file (type png)
-<use fig_HDBSCAN Pipeline.png>
-Package pdftex.def Info: fig_HDBSCAN Pipeline.png  used on input line 356.
+
+[8]
+
+[9]
+<./images/fig_HDBSCAN Pipeline.png, id=243, 930.47626pt x 150.5625pt>
+File: ./images/fig_HDBSCAN Pipeline.png Graphic file (type png)
+<use ./images/fig_HDBSCAN Pipeline.png>
+Package pdftex.def Info: ./images/fig_HDBSCAN Pipeline.png  used on input line 375.
 (pdftex.def)             Requested size: 350.99762pt x 56.79391pt.
 
 
-[8 <./fig_HDBSCAN Pipeline.png>]
-
-[9]
-
-[10]
+[10 <./images/fig_HDBSCAN Pipeline.png>]
 
 [11]
 
 [12]
-Underfull \hbox (badness 2837) in paragraph at lines 480--480
+
+[13]
+
+[14]
+Underfull \hbox (badness 2837) in paragraph at lines 499--499
 []|\T1/cmr/m/n/12 Earth Sci-ence and Ap-pli-ca-tions from
  []
 
 (./LL_info_content.bbl
 
-[13]
+[15]
 Underfull \hbox (badness 10000) in paragraph at lines 31--33
 \T1/cmr/m/n/12 URL [][]$\T1/cmtt/m/n/12 http : / / kohaumotu . org / Rongorongo / Glyph _ Library / index .
  []
 
 )
 
-[14] (./LL_info_content.aux)
+[16] (./LL_info_content.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -472,18 +476,18 @@ Package rerunfilecheck Info: File `LL_info_content.out' has not changed.
 (rerunfilecheck)             Checksum: 60C959D28E97256897FFDF6B46B3D29F;4503.
  ) 
 Here is how much of TeX's memory you used:
- 11675 strings out of 473190
- 176975 string characters out of 5715801
- 581266 words of memory out of 5000000
- 34696 multiletter control sequences out of 15000+600000
+ 11687 strings out of 473190
+ 177602 string characters out of 5715801
+ 581280 words of memory out of 5000000
+ 34706 multiletter control sequences out of 15000+600000
  573580 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,79p,1202b,687s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,1384b,687s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti0700.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on LL_info_content.pdf (16 pages, 4816674 bytes).
+Output written on LL_info_content.pdf (18 pages, 4820851 bytes).
 PDF statistics:
- 407 PDF objects out of 1000 (max. 8388607)
- 335 compressed objects within 4 object streams
- 69 named destinations out of 1000 (max. 500000)
+ 415 PDF objects out of 1000 (max. 8388607)
+ 341 compressed objects within 4 object streams
+ 71 named destinations out of 1000 (max. 500000)
  258 words of extra memory for PDF output out of 10000 (max. 10000000)
 

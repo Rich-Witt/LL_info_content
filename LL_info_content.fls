@@ -155,11 +155,10 @@ INPUT ./LL_info_content.out
 OUTPUT LL_info_content.out
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecrm1728.tfm
-INPUT ./fig_placeholder.png
-INPUT ./fig_placeholder.png
-INPUT ./fig_placeholder.png
-INPUT ./fig_placeholder.png
-INPUT ./fig_placeholder.png
+INPUT ./images/fig_placeholder.png
+INPUT ./images/fig_placeholder.png
+INPUT ./images/fig_placeholder.png
+INPUT ./images/fig_placeholder.png
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecti1200.tfm
 INPUT /usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map
@@ -203,27 +202,23 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecrm0800.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecti0700.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ectt1200.tfm
-INPUT ./fig_rongo_g_washington.png
-INPUT ./fig_rongo_g_washington.png
-INPUT ./fig_rongo_g_washington.png
-INPUT ./fig_rongo_g_washington.png
-INPUT ./fig_rongo_g_washington.png
+INPUT ./images/fig_rongo_g_washington.png
+INPUT ./images/fig_rongo_g_washington.png
+INPUT ./images/fig_rongo_g_washington.png
+INPUT ./images/fig_rongo_g_washington.png
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm
-INPUT ./fig_glyphs_example.png
-INPUT ./fig_glyphs_example.png
-INPUT ./fig_glyphs_example.png
-INPUT ./fig_glyphs_example.png
-INPUT ./fig_glyphs_example.png
-INPUT ./fig_9329-Linear-A-Script.jpg
-INPUT ./fig_9329-Linear-A-Script.jpg
-INPUT ./fig_9329-Linear-A-Script.jpg
-INPUT ./fig_9329-Linear-A-Script.jpg
-INPUT ./fig_9329-Linear-A-Script.jpg
-INPUT ./fig_HDBSCAN Pipeline.png
-INPUT ./fig_HDBSCAN Pipeline.png
-INPUT ./fig_HDBSCAN Pipeline.png
-INPUT ./fig_HDBSCAN Pipeline.png
-INPUT ./fig_HDBSCAN Pipeline.png
+INPUT ./images/fig_glyphs_example.png
+INPUT ./images/fig_glyphs_example.png
+INPUT ./images/fig_glyphs_example.png
+INPUT ./images/fig_glyphs_example.png
+INPUT ./images/fig_9329-Linear-A-Script.jpg
+INPUT ./images/fig_9329-Linear-A-Script.jpg
+INPUT ./images/fig_9329-Linear-A-Script.jpg
+INPUT ./images/fig_9329-Linear-A-Script.jpg
+INPUT ./images/fig_HDBSCAN Pipeline.png
+INPUT ./images/fig_HDBSCAN Pipeline.png
+INPUT ./images/fig_HDBSCAN Pipeline.png
+INPUT ./images/fig_HDBSCAN Pipeline.png
 INPUT ./LL_info_content.bbl
 INPUT ./LL_info_content.bbl
 INPUT LL_info_content.bbl
