@@ -71,6 +71,7 @@
 \definecolor{A6GreyGrey}{HTML}{7d93a0}
 \definecolor{A6LightGrey}{HTML}{E5E9EC}
 
+\usepackage{linearA}
 \graphicspath{{./images/}}
 
 \journal{TBD}
@@ -327,18 +328,20 @@ Based on this definition, several languages may qualify as low-resource language
 
 
 \subsection{Data Preparation}
-\subsubsection{Tokenization} *** NOT IN CODE YET ***
-Each individual symbol was tokenized by simple indexing. Each visibly atomic symbol identified by prior research such as \cite{barthel1958grundlagen} \cite{salgarella2021_sigla} \cite{yadav2010_indus_ngrams} is assumed to be the atomic element of information or symbol. Each symbol is simply a distinct indexed item such as 001 for Rongorongo or *** INSERT COOL glyph *** in the case of Linear A. 
+\subsubsection{Tokenization}
+Each individual symbol was tokenized by simple indexing. Each visibly atomic symbol identified by prior research such as \cite{barthel1958grundlagen} \cite{salgarella2021_sigla} \cite{yadav2010_indus_ngrams} is assumed to be the atomic element of information or symbol. Each symbol is simply a distinct indexed item such as 001 for Rongorongo or \LinearAII{} in the case of Linear A. 
 
 \subsubsection{Sequence Construction}
-TODO: Reference why this is used in cryptoanalysis and why it might apply here. 
-Each corpus is sequenced as one long single sequence. No boundary or gap tokens are used as these would require an assumption of knowledge on the underlying structure of the communication. This places empty spaces on the same informational level as symbols.
+Each corpus is sequenced as one long single sequence. Boundary or gap tokens are used only to when at the beginning and end of an artifact or creating positional features such as frequency rank of adjacent symbols. This limits assumption of knowledge on the underlying structure of the communication to only start and stop of sequences and places empty spaces on the same informational level as symbols.
 Let the resulting ordered token sequence be
 \[
 X = (x_1,x_2,\ldots,x_L),
 \]where \(L\) is the number of tokens in the corpus.
 
-\subsubsection{Frequency Rank Normalization} *** NOT IN CODE YET ***
+\subsubsection{Corpus Identiy Sanitization} 
+
+Information that could easily identify symbols is sanitized from the data set to ensure that down stream algorithms, such as HDBSCAN, do not rely on metadata to distinguish between corpora. 
+
 Each corpus is frequency rank normalized independently before the corpora are merged. Let \(\mathcal{S}_c\) denote the set of observed symbols in corpus \(c\), with corpus frequency \(f_c(s)\) calculated. Signs are then ordered from most to least frequent. Tied frequencies are assigned their mean rank.
 
 Since the corpora contain different numbers of symbols, ranks are normalized with:
@@ -350,7 +353,10 @@ symbol \(\left|\mathcal{S}_c\right|\). \(\rho_c(s)=0\) represents the most frequ
 
 Frequency rank normalization removes sign identity and gives the two scripts a shared feature space. This shared feature space allows HDBSCAN to compare patterns of relative symbol frequency and prevents the algorithm from separating the corpora merely based on different symbol inventories. 
 
+Further feature engineering is conducted to differentiate symbols with equivalent frequencies. Features added include contextual, positional, and token boundary frequency. 
+
 \subsection{Machine Learning with HDBSCAN}
+
 HDBSCAN pipeline consists of seven separate stages. Corpus Ingestion, TF-IDF Vectorization and UMAP Dimensionality Reduction prepare the data for the HDBSCAN algorithm. The HDBSCAN algorithm analyzes the data to form groups by evaluating the relative density and proximity of the data points \cite{campello2015_hierarchical_density_estimates}. Topic extraction supports interpretation of resulting clusters and 3D Projection prepares the HDBSCAN output for 3 dimensional visualization. The following paragraphs describe each step of the process.
 
 \begin{figure}[H]
